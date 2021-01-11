@@ -14,11 +14,14 @@
 
 package v1
 
-import "github.com/opencontainers/image-spec/specs-go"
+import "github.com/Foundato/image-spec/specs-go"
 
 // Manifest provides `application/vnd.oci.image.manifest.v1+json` mediatype structure when marshalled to JSON.
 type Manifest struct {
 	specs.Versioned
+
+	// MediaType is the media type of the object this schema refers to.
+	MediaType string `json:"mediaType,omitempty"`
 
 	// Config references a configuration object for a container, by digest.
 	// The referenced configuration object is a JSON blob that the runtime uses to set up the container.

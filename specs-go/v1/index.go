@@ -14,7 +14,7 @@
 
 package v1
 
-import "github.com/opencontainers/image-spec/specs-go"
+import "github.com/Foundato/image-spec/specs-go"
 
 // Index references manifests for various platforms.
 // This structure provides `application/vnd.oci.image.index.v1+json` mediatype when marshalled to JSON.
